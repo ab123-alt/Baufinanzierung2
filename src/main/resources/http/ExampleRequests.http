@@ -1,0 +1,69 @@
+GET http://localhost:8082/v1/baufinanzierung/666
+Accept: application/json
+
+###
+
+GET http://localhost:8082/v1/baufinanzierung/1
+Accept: application/json
+
+### POST with exception
+POST http://localhost:8082/v1/baufinanzierung
+Content-Type: application/json
+
+{
+  "immobilienData": {},
+  "finanzierungsvorhabenData": {}
+}
+
+###
+POST http://localhost:8082/v1/baufinanzierung
+Content-Type: application/json
+
+{
+  "antragstellerData": {
+    "vorname": "vorname",
+    "nachname": "nachname"
+  },
+  "immobilienData": {
+    "adresse": {
+      "strasse": "strasse",
+      "hausnummer": 1,
+      "plz": "12345",
+      "ort": "ort"
+    },
+    "artDerImmobilie": "GROSSESHAUS",
+    "groesseGrundstueck": 1000
+  },
+  "finanzierungsvorhabenData": {
+    "darlehenzweck": "KAUF",
+    "kaufpreis": 1,
+    "mobiliarKosten": 1,
+    "sonstigeKosten": 1,
+    "grunderwerbSteuer": 1,
+    "notargebuehren": 1,
+    "maklergebuehren": 1,
+    "wirdModernisiert": false
+  }
+}
+
+### example requests for testing purposes
+
+### POST antragsteller
+POST http://localhost:8082/v1/baufinanzierung/antragsteller
+Content-Type: application/json
+
+{
+  "vorname": "dddd",
+  "nachname": "nachname",
+  "phone": "phone",
+  "mail": "mail",
+  "geburtsdatum": "2000-11-14",
+  "geburtsort": "gebOrt",
+  "weitereKontaktMoeglichkeiten": "kontakt",
+  "adresseData": {
+    "strasse": "strasse",
+    "hausnummer": 1,
+    "plz": "12345",
+    "ort": "ort"
+  }
+}
