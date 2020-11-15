@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @ToString
 @AllArgsConstructor
+// TODO Validierung der DTOs
 public class CreateAngebotData {
 
     @NotNull @Valid

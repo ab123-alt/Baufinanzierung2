@@ -12,11 +12,12 @@ import lombok.ToString;
 //TODO check data types
 public class FinanzierungsvorhabenData {
     private DarlehenZweck darlehenzweck;
-    private long kaufpreis;
-    private long mobiliarKosten;
-    private long sonstigeKosten;
-    private double grunderwerbSteuer;
-    private double notargebuehren;
-    private double maklergebuehren;
+
+    private Long kaufpreis;
+    private Long mobiliarKosten;
+    private Long sonstigeKosten;
+    private Double grunderwerbSteuer;
+    private Double notargebuehren;
+    private Double maklergebuehren;
     private boolean wirdModernisiert;
 }

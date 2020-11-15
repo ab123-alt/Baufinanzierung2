@@ -16,6 +16,8 @@
 
   <properties>
     <java.version>1.8</java.version>
+    <springdoc.version>1.3.2</springdoc.version>
+    <springdoc-data-rest.version>1.3.2</springdoc-data-rest.version>
   </properties>
 
   <dependencies>
@@ -30,6 +32,16 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>${springdoc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-data-rest</artifactId>
+      <version>${springdoc-data-rest.version}</version>
     </dependency>
 
     <dependency>

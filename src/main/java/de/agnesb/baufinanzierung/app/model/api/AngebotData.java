@@ -10,12 +10,13 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 public class AngebotData {
-    private double sollzins;
-    private double effektivzins;
-    private double beleihungsauslauf;
+
+    private Double sollzins;
+    private Double effektivzins;
+    private Double beleihungsauslauf;
     private String produktanbieter;
-    private long monatlRate;
-    private long darlehenssumme;
+    private Long monatlRate;
+    private Long darlehenssumme;
     private int zinsbindung;
     private LocalDate annahmeFrist;
 }

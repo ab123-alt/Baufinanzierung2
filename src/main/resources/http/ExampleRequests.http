@@ -1,8 +1,8 @@
+### GET with exception
 GET http://localhost:8082/v1/baufinanzierung/666
 Accept: application/json
 
-###
-
+### working GET
 GET http://localhost:8082/v1/baufinanzierung/1
 Accept: application/json
 
@@ -15,7 +15,7 @@ Content-Type: application/json
   "finanzierungsvorhabenData": {}
 }
 
-###
+### working POST
 POST http://localhost:8082/v1/baufinanzierung
 Content-Type: application/json
 

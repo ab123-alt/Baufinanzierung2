@@ -14,8 +14,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class AntragstellerData {
 
-    @NotBlank(message = "Name is mandatory")
     private String vorname;
+    @NotBlank(message = "Last name is mandatory")
     private String nachname;
     private String phone;
     private String mail;
