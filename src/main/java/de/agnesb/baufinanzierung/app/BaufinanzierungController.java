@@ -1,6 +1,5 @@
 package de.agnesb.baufinanzierung.app;
 
-import de.agnesb.baufinanzierung.app.model.*;
 import de.agnesb.baufinanzierung.app.model.api.AngebotData;
 import de.agnesb.baufinanzierung.app.model.api.CreateAngebotData;
 import io.swagger.v3.oas.annotations.Operation;
@@ -13,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/v1/baufinanzierung")

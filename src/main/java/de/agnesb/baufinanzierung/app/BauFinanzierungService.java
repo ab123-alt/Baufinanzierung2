@@ -1,6 +1,5 @@
 package de.agnesb.baufinanzierung.app;
 
-
 import de.agnesb.baufinanzierung.app.model.api.AngebotData;
 import de.agnesb.baufinanzierung.app.shared.exceptions.AngebotNotFoundException;
 import lombok.RequiredArgsConstructor;

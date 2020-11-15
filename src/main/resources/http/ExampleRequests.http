@@ -1,4 +1,4 @@
-### GET with exception
+### GET with exception (demonstrates EntityNotFound)
 GET http://localhost:8082/v1/baufinanzierung/666
 Accept: application/json
 
@@ -6,7 +6,7 @@ Accept: application/json
 GET http://localhost:8082/v1/baufinanzierung/1
 Accept: application/json
 
-### POST with exception
+### POST with exception caused by validation
 POST http://localhost:8082/v1/baufinanzierung
 Content-Type: application/json
 
