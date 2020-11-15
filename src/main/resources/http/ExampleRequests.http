@@ -45,25 +45,3 @@ Content-Type: application/json
     "wirdModernisiert": false
   }
 }
-
-### example requests for testing purposes
-
-### POST antragsteller
-POST http://localhost:8082/v1/baufinanzierung/antragsteller
-Content-Type: application/json
-
-{
-  "vorname": "dddd",
-  "nachname": "nachname",
-  "phone": "phone",
-  "mail": "mail",
-  "geburtsdatum": "2000-11-14",
-  "geburtsort": "gebOrt",
-  "weitereKontaktMoeglichkeiten": "kontakt",
-  "adresseData": {
-    "strasse": "strasse",
-    "hausnummer": 1,
-    "plz": "12345",
-    "ort": "ort"
-  }
-}

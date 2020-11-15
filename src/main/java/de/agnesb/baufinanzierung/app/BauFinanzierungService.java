@@ -10,10 +10,10 @@ import java.time.LocalDate;
 
 @Service
 @RequiredArgsConstructor
+// TODO Repositories, Mapper
 public class BauFinanzierungService {
 
     public AngebotData findFinanzierungById(Long id) {
-        // TODO Repositories, Mapper
         if(id.equals(Long.valueOf(666))) {
             throw new AngebotNotFoundException("Angebot id=[" + id + "]");
         }

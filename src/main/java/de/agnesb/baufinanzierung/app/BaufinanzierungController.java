@@ -32,9 +32,9 @@ public class BaufinanzierungController {
             @ApiResponse(responseCode = "500", description = "Unexpected error")
     })
     public ResponseEntity<AngebotData> finanzierungFinden(
-            @PathVariable(value = "angebotId") Long vorgangId) {
-        log.info("finding Angebot with id {}", vorgangId);
-        return ResponseEntity.ok(bauFinanzierungService.findFinanzierungById(vorgangId));
+            @PathVariable(value = "angebotId") Long angebotId) {
+        log.info("finding Angebot with id {}", angebotId);
+        return ResponseEntity.ok(bauFinanzierungService.findFinanzierungById(angebotId));
     }
 
     @PostMapping()
@@ -48,22 +48,5 @@ public class BaufinanzierungController {
             @Valid @RequestBody CreateAngebotData createAngebotData) {
         log.info("creating Angebot from data {}", createAngebotData);
         return ResponseEntity.status(HttpStatus.CREATED.value()).body(bauFinanzierungService.calculateFinanzierung());
-    }
-
-    // -------------------------------------------- temporary testing methods ------------------------------------//
-
-    @GetMapping("/antragsteller")
-    public ResponseEntity<AntragstellerData> antragstellerFinden()
-    {
-        log.info("finding antragsteller");
-        AdresseData adresse = AdresseData.builder().strasse("strasse").hausnummer(1).ort("ort").plz("12345").build();
-        return ResponseEntity.ok(new AntragstellerData("vorname", "nachname", "phone", "mail", LocalDate.of(2000, 11, 14), "gebOrt", "kontakt", adresse));
-    }
-
-    @PostMapping("/antragsteller")
-    public ResponseEntity<AntragstellerData> antragstellerAnlegen(
-            @Valid @RequestBody AntragstellerData antragsteller) {
-        log.info("posting antragsteller {}", antragsteller);
-        return ResponseEntity.ok(antragsteller);
     }
 }
